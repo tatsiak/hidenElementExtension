@@ -1,6 +1,7 @@
-var selector = "[name=presale]";
-if (document.querySelector(selector).value != '') {
-    var hidenElementValue = document.querySelector(selector).value;
+
+var re = /yapi.(?:[\w\.]+)\/stat\/\?g=(\w+)/g;
+var value = re.exec(document.documentElement.innerHTML);
+if (value[1] != '') {
     var popup = document.createElement('div');
     var htmlMessage = document.createElement('span');
     popup.style.zIndex = 999;
@@ -10,7 +11,7 @@ if (document.querySelector(selector).value != '') {
     popup.style.position = "absolute";
     popup.style.right = 0;
     popup.style.top = 0;
-    htmlMessage.innerHTML = selector + ": "+ hidenElementValue + '</br>';
+    htmlMessage.innerHTML = 'Value is' + ": "+ value[1] + '</br>';
     popup.appendChild(htmlMessage);
     document.body.appendChild(popup);
 }

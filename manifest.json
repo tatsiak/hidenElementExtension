@@ -1,6 +1,6 @@
 {
-"name":"hiden element value",
-"description":"This extension will show you hiden element value, if it exist. You just have to set CSS or X-Path selector in script.js file.",
+"name":"show value",
+"description":"This extension will show you result of execution of regular expression, if it exist. You just have to set your regex in script.js file.",
 "version":"1.0",
 "manifest_version":2,
 "content_scripts": [
